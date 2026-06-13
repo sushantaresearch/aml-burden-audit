@@ -64,9 +64,13 @@ Supplementary Material:
 - Post-processing outcomes (Sec. VIII prose): mitigation_joint_results.csv,
   mitigation_results.csv
 - S.7 (privacy clipping): privacy_clipping_table.csv
-- S.8 / S.9 (customs per-origin audit and two-domain contrast):
-  [TODO: export the per-origin output of CELL_CX2/CX3 if not already saved
-  as a CSV, and list the filename here]
+- S.8 / S.9 (customs per-origin audit and origin-tier contrast):
+  customs_perorigin_fraud.csv, customs_perorigin_crit2.csv (per-origin
+  one-vs-rest burden ratios with importer-clustered bootstrap CIs and BH,
+  from CELL_CX3), customs_nonoecd_oecd.csv (non-OECD vs OECD contrast
+  across budgets, clustered vs naive with design effects), and
+  customs_burden_results.csv (strict UN-LDC vs OECD table from CELL_CX2;
+  the LDC tier is reported as not estimable at n=42)
 - Robustness extras: amlworld_xgb_hp_robustness.csv,
   amlworld_fairness_toolkit_comparison.csv, gnn_calibration_drift.csv,
   amlworld_centrality_panel.csv, samld_support_sensitivity.csv,
