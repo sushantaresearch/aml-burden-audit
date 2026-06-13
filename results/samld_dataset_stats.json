@@ -1,0 +1,120 @@
+{
+  "total_rows": 9504852,
+  "positives": 9873,
+  "positive_rate": 0.0010387326388669703,
+  "n_accounts": 855460,
+  "date_min": "2022-10-07",
+  "date_max": "2023-08-23",
+  "n_days": 321,
+  "split_train_end_day_excl": 192,
+  "split_val_end_day_excl": 256,
+  "sender_country_top": [
+    [
+      "UK",
+      9183088
+    ],
+    [
+      "Turkey",
+      20902
+    ],
+    [
+      "Switzerland",
+      20503
+    ],
+    [
+      "Pakistan",
+      20346
+    ],
+    [
+      "UAE",
+      20081
+    ],
+    [
+      "Nigeria",
+      20027
+    ],
+    [
+      "Spain",
+      19391
+    ],
+    [
+      "Germany",
+      19259
+    ],
+    [
+      "USA",
+      19027
+    ],
+    [
+      "Italy",
+      18895
+    ],
+    [
+      "France",
+      18702
+    ],
+    [
+      "Japan",
+      18468
+    ],
+    [
+      "Morocco",
+      18437
+    ],
+    [
+      "Austria",
+      18050
+    ],
+    [
+      "Mexico",
+      17662
+    ],
+    [
+      "Albania",
+      17648
+    ],
+    [
+      "India",
+      17596
+    ],
+    [
+      "Netherlands",
+      16770
+    ]
+  ],
+  "payment_types": [
+    [
+      "Credit card",
+      2012909
+    ],
+    [
+      "Debit card",
+      2012103
+    ],
+    [
+      "Cheque",
+      2011419
+    ],
+    [
+      "ACH",
+      2008807
+    ],
+    [
+      "Cross-border",
+      933931
+    ],
+    [
+      "Cash Withdrawal",
+      300477
+    ],
+    [
+      "Cash Deposit",
+      225206
+    ]
+  ],
+  "amount_stats": {
+    "min": 3.73,
+    "mean": 8762.967600927232,
+    "max": 12618498.4
+  }
+}

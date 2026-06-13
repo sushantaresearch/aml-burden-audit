@@ -1,0 +1,19 @@
+{
+  "n_days": 321,
+  "n_train_days": 192,
+  "n_val_days": 64,
+  "n_test_days": 65,
+  "train_day_range_excl": [
+    0,
+    192
+  ],
+  "val_day_range_excl": [
+    192,
+    256
+  ],
+  "test_day_range_excl": [
+    256,
+    321
+  ],
+  "ts_min_iso": "2022-10-07 10:35:19"
+}
