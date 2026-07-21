@@ -1,0 +1,49 @@
+{
+ "_provenance": "Values loaded unchanged by code/CELL_4C3_seed_replicate.py via extract_param from the IBM Multi-GNN reference implementation model_settings.json (gin); optimizer and checkpoint rule from train_util.py/training.py of that repository. Verified 2026-07-21.",
+ "model": "gin",
+ "flags": {
+  "emlps": true,
+  "reverse_mp": true,
+  "ego": true,
+  "ports": true,
+  "tds": false
+ },
+ "lr": 0.006213266113989207,
+ "n_hidden": 66,
+ "n_mlp_layers": 1,
+ "n_gnn_layers": 2,
+ "loss": "ce",
+ "w_ce1": 1.0000182882773443,
+ "w_ce2": 6.275014431494497,
+ "norm_method": "z_normalize",
+ "dropout": 0.00983468338330501,
+ "final_dropout": 0.10527690625126304,
+ "batch_size": 8192,
+ "num_neighs": [
+  100,
+  100
+ ],
+ "optimizer": "Adam(lr)",
+ "checkpoint_selection": "best validation minority-class F1 per epoch; base run early-stops to the epoch-10 best-validation checkpoint",
+ "seeds_reported": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "reweighting_replicates_epochs": 40,
+ "split_global_indices": {
+  "train": [
+   0,
+   3248920
+  ],
+  "val": [
+   3248921,
+   4214444
+  ],
+  "test": [
+   4214445,
+   5078344
+  ]
+ }
+}
