@@ -8,7 +8,7 @@ Submitted to IEEE Access (2026).
 
 Sole author: Sushanta Paul (ORCID: 0009-0007-8071-6971), National Board of Revenue, Government of Bangladesh. Contact: sushanta.researcher@gmail.com
 
-Archived snapshot: https://doi.org/10.5281/zenodo.20676344
+Archived on Zenodo: https://doi.org/10.5281/zenodo.20676343
 
 ## What this repository contains
 
@@ -71,9 +71,8 @@ If you use this code or these artifacts, please cite the paper (citation to be u
   author    = {Paul, Sushanta},
   title     = {aml-burden-audit: Code and result artifacts for "Who the Screen Flags: Auditing and Mitigating Structure-Conditioned False-Positive Burden in Anti-Money-Laundering Screening"},
   year      = {2026},
-  version   = {v1.0},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.20676344},
-  url       = {https://doi.org/10.5281/zenodo.20676344}
+  doi       = {10.5281/zenodo.20676343},
+  url       = {https://doi.org/10.5281/zenodo.20676343}
 }
 ```
