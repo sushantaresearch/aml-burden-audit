@@ -12,7 +12,7 @@ Archived snapshot: https://doi.org/10.5281/zenodo.20676344
 
 ## What this repository contains
 
-Every table in the paper and its Supplementary Material is backed by a result file in `results/`, and every number traces to a file per the provenance rule used during manuscript engineering ("no number without a source"). The audit pipeline, detector configurations, the four graph-run seeds, the exact temporal split boundaries, and the Multi-GNN porting notes are in `code/`, as promised in the paper's Reproducibility Statement.
+Every table in the paper and its Supplementary Material is backed by a result file in `results/`, and every number traces to a file per the provenance rule used during manuscript engineering ("no number without a source"). The audit pipeline, detector configurations, the four graph-run seeds, the exact temporal split boundaries, and the Multi-GNN porting notes are in `code/` and `configs/`, as promised in the paper's Reproducibility Statement.
 
 ## Layout
 
@@ -20,10 +20,12 @@ Every table in the paper and its Supplementary Material is backed by a result fi
 - `LICENSE` (MIT, applies to code; result files are CC-BY-4.0, see below)
 - `references_v4_final.bib` (machine-readable bibliography, DOI-verified)
 - `code/` audit and training scripts (Colab cells exported as .py), detector hyperparameters, seeds, split boundaries, Multi-GNN porting notes
+- `configs/` frozen per-detector configuration files (multignn_amlworld_gin.json, xgb_amlworld_thin_rich.json)
+- `code/reconstruct_legal_form.py` legal-form grouping reconstruction (entity field and value-to-class mapping)
 - `results/` small result files backing each table (manifest below)
 - `figures/` publication figure PDFs (fig_bh_forest.pdf, fig_dose_response_v2.pdf)
 
-Large artifacts (per-transaction score files of 20-77 MB, model checkpoint .tar files, centrality .npz, edge-weight .npy) are attached to the GitHub v1.0 RELEASE as release assets and mirrored in the Zenodo deposit rather than committed to the repository, to keep clones light.
+Large intermediate artifacts (per-transaction score files, model checkpoints, centrality matrices) are retained by the author and available on reasonable request; every number in the paper is backed by the small result files in `results/`.
 
 ## Results manifest (table -> file)
 
@@ -46,17 +48,9 @@ Supplementary Material:
 - S.8 / S.9 (customs per-origin audit and origin-tier contrast): customs_perorigin_fraud.csv, customs_perorigin_crit2.csv (per-origin one-vs-rest burden ratios with importer-clustered bootstrap CIs and BH, from CELL_CX3), customs_nonoecd_oecd.csv (non-OECD vs OECD contrast across budgets, clustered vs naive with design effects), and customs_burden_results.csv (strict UN-LDC vs OECD table from CELL_CX2; the LDC tier is reported as not estimable at n=42)
 - Robustness extras: amlworld_xgb_hp_robustness.csv, amlworld_fairness_toolkit_comparison.csv, gnn_calibration_drift.csv, amlworld_centrality_panel.csv, samld_support_sensitivity.csv, three_way_fairness_table.csv
 
-Release assets (not in repo):
-- Per-transaction scores: amlworld_gnn_{val,test}_scores_seed{2,3,4}.csv, amlworld_gnn_{val,test}_scores_4c_w{1.5,2.5,4.0}*.csv, samld_{thin,rich}_xgb_{val,test}_scores.csv, samld_gnn_{val,test}_scores*.csv
-- Checkpoints: checkpoint_seed{2,3,4}.tar, checkpoint_True.tar, checkpoint_4c_w{1.5,2.5,4.0}_seed*.tar
-- Graph inputs: amlworld_centralities.npz, train_edge_weights_kc.npy, samld_accounts.csv, samld_account_degree.csv
-- Split and encoding records: samld_split_days.json, samld_encoding_maps.json, samld_dataset_stats.json, samld_gnn_train_log.txt
-
 ## Data sources (not redistributed)
 
-Raw benchmarks are NOT redistributed here. Obtain them from their original sources: AMLworld HI-Small (IBM, via Kaggle), SAML-D (via Kaggle), and the public customs import-declarations benchmark of Jeong et al. Score files in the release contain model outputs keyed to transaction indices.
-
-[TODO: confirm score CSVs carry no raw source columns beyond index, label, and score before publishing the release; if they do, either drop those columns or confirm the benchmark license permits redistribution.]
+Raw benchmarks are NOT redistributed here. Obtain them from their original sources: AMLworld HI-Small (IBM, via Kaggle), SAML-D (via Kaggle), and the public customs import-declarations benchmark of Jeong et al. Model score files are keyed to transaction indices and are available from the author on reasonable request.
 
 ## Reproduce
 
